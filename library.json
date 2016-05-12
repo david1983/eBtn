@@ -1,0 +1,12 @@
+{
+  "name": "eBtn",
+  "keywords": "button, events, long press, release, hold, click",
+  "description": "The eBtn library allow to create a button specifying a pin and add the following events to the btn [press , hold, release, long]",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/david1983/eBtn"
+  },
+  "frameworks": "arduino",
+  "platforms": "atmelavr"
+}
