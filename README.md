@@ -9,5 +9,5 @@ The library handle the following events:
 
 **The library entirely depends on the asyncDelay library available at https://github.com/david1983/asyncDelay**
 
-**Examples**
+**Examples coming soon**
 
