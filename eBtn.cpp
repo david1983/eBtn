@@ -19,6 +19,7 @@ void eBtn::handle(){
   _prevStatus = _status;
   _status = digitalRead(_pin);       
   if(_prevStatus==_status &&  _status==1)_event="";
+
   else if(_prevStatus!=_status &&  _status==0){
     _event="press";
     _startPress = millis();
@@ -32,6 +33,7 @@ void eBtn::handle(){
     }
     _startPress=0;    
   }
+
   if(_event=="press")_press();
   if(_event=="hold")_hold();
   if(_event=="release")_release();
