@@ -1,6 +1,5 @@
 #include "Arduino.h"
 #include "eBtn.h"
-#include <asyncDelay.h>
 
 typedef void (*callBack) ();
 
@@ -10,7 +9,7 @@ eBtn::eBtn(int pin){
   pinMode(_pin, OUTPUT);
   digitalWrite(_pin,HIGH);
   _status = digitalRead(pin);  
-  _pressThrsld = 1000;
+  _pressThrsld = 1000;  
   delay(100);
 };
 
@@ -39,8 +38,6 @@ void eBtn::handle(){
   if(_event=="release")_release();
   if(_event=="long")_long();
 }
-
-//setting an async 
 
 void eBtn::on(String eventName, callBack cb){  
   if(eventName=="press")_press = cb;
