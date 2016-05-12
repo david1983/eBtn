@@ -1,8 +1,24 @@
+/*
+	InterruptButton
+
+	Simple sketch to control a button on pin 0 using
+	the eBtn library and Interrupt
+
+	The circuit:
+	pushButton attached on pin 0
+
+	Created 11 May 2016
+	By Davide Andreazzini
+	
+	https://github.com/david1983/eBtn
+
+*/
 #include <eBtn.h>
 
 float n;
 // Initialization of an eBtn on pin 0;
-eBtn btn = eBtn(0);
+const int btnPin = 0;
+eBtn btn = eBtn(btnPin);
 
 void setup() {
 	Serial.begin(115200);	
@@ -12,7 +28,7 @@ void setup() {
 	btn.on("release",releaseFunc);
 	btn.on("long",longPressFunc);
 	//setting the interrupt on btn pin to react on change state
-	attachInterrupt(0, pin_ISR, CHANGE);	
+	attachInterrupt(btnPin, pin_ISR, CHANGE);	
 }
 
 //function to handle the interrupt event
