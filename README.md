@@ -7,5 +7,13 @@ The library handle the following events:
 - hold
 - longPress
 
-**Examples coming soon**
+**Usage**
+    
+    eBtn btn = eBtn(btnPin);
+    
+    on("press",callbackFn);
+    
+    void callbackFn(){
+      //do something here
+    }
 
