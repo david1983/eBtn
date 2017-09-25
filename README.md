@@ -11,7 +11,7 @@ The library handle the following events:
     
     eBtn btn = eBtn(btnPin);
     
-    on("press",callbackFn);
+    btn.on("press",callbackFn);
     
     void callbackFn(){
       //do something here
